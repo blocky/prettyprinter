@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/mock"
 
 	"github.com/blocky/prettyprinter"
-	"github.com/blocky/prettyprinter/mocks"
+	"github.com/blocky/prettyprinter/internal/mocks"
 )
 
 func TestPrettyPrinter(t *testing.T) {
