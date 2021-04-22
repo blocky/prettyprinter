@@ -1,5 +1,6 @@
 # Pretty Printer
 [![Build Status](https://www.travis-ci.com/blocky/prettyprinter.svg?branch=main)](https://www.travis-ci.com/blocky/prettyprinter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/blocky/prettyprinter)](https://goreportcard.com/report/github.com/blocky/prettyprinter)
 
 Pretty printer is a simple printer designed to prettify everything. It can process everything from simple input to complex structs into readable json output.
 
