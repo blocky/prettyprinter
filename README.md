@@ -1,4 +1,6 @@
 # Pretty Printer
+[![Build Status](https://www.travis-ci.com/blocky/prettyprinter.svg?branch=main)](https://www.travis-ci.com/blocky/prettyprinter)
+
 Pretty printer is a simple printer designed to prettify everything. It can process everything from simple input to complex structs into readable json output.
 
 To create a pretty printer with default outputs to `stdout` and `stderr`, use:
