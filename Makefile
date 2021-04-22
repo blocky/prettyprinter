@@ -9,8 +9,8 @@ MOCKS=internal/mocks
 default: test
 
 mock: # autogenerate mocks for interface testing
-	$(MOCK) --all --output=./$(MOCKS)
+	@$(MOCK) --all --output=./$(MOCKS)
 
 test:
-	$(GOTEST) ./... && $(GOTIDY)
+	@$(GOTEST) ./... && $(GOTIDY)
 
