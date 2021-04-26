@@ -1,4 +1,4 @@
-# Pretty Printer
+# JSON Pretty Printer
 [![GoDoc](https://godoc.org/github.com/blocky/prettyprinter?status.svg)](https://godoc.org/github.com/blocky/prettyprinter)
 [![Build Status](https://www.travis-ci.com/blocky/prettyprinter.svg?branch=main)](https://www.travis-ci.com/blocky/prettyprinter)
 [![Go Report Card](https://goreportcard.com/badge/github.com/blocky/prettyprinter)](https://goreportcard.com/report/github.com/blocky/prettyprinter)
@@ -39,7 +39,7 @@ err := p.Add(struct{Int int}{integer}).
 }
 ```
 
-Pretty printer will have purged the thing added with `Add()` after attempting to print via `Flush()`, and can be continued to be reused to print more.
+Pretty printer will purge its internal spool after attempting to print, with `Flush()`, and can be continued to be reused to print more.
 
 
 Pretty printer can also attempt to write its own printing error to `stderr`:
@@ -56,13 +56,15 @@ Want to write to something other than `stdout` or `stderr`? Use `Dump()` to writ
 file, err := os.Open("./folder/file.txt")
 defer file.Close()
 
-var string string = "\"{msg: writing some json}\""
-err := p.Add(integer).
+var msg string = "writing some json"
+err := p.Add(struct{Msg string}{msg}).
 	Dump(file).
 	Error()
 ```
 ```text
-"{msg: writing some json}"
+{
+ "Msg": "writing some json"
+}
 ```
 
 To print more complicated things like multi-fielded structs, just pass the struct to pretty printer. Make sure the fields you want to print are public. Uncapitalized fields will not be printed:
