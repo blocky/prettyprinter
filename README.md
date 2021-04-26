@@ -1,4 +1,5 @@
 # Pretty Printer
+[![GoDoc](https://godoc.org/github.com/blocky/prettyprinter?status.svg)](https://godoc.org/github.com/blocky/prettyprinter)
 [![Build Status](https://www.travis-ci.com/blocky/prettyprinter.svg?branch=main)](https://www.travis-ci.com/blocky/prettyprinter)
 [![Go Report Card](https://goreportcard.com/badge/github.com/blocky/prettyprinter)](https://goreportcard.com/report/github.com/blocky/prettyprinter)
 
